@@ -1,3 +1,5 @@
+// exports crawler agent params
+
 let url = "https://www.cdp.net/en/responses";
 let query = [
     "queries[name]=South+Africa",
