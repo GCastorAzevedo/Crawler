@@ -1,4 +1,4 @@
-//'use strict';
+// Crawler agent should be exported as a crawler function
 
 const fs = require('fs');
 const console = require('console');
@@ -77,7 +77,7 @@ function buildURL(url, query) {
     return url;
 }
 
-module.exports = function crawler(url, query, pages, filename) {
+function crawler(url, query, pages, filename) {
 
     url = buildURL(url, query);
 
@@ -93,3 +93,5 @@ module.exports = function crawler(url, query, pages, filename) {
     }
     promisesChain(promises);
 }
+
+module.exports = crawler;
